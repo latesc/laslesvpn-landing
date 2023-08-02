@@ -2,12 +2,12 @@
     <div class="mx-auto flex max-w-6xl flex-col gap-10 md:flex-row md:items-center">
         <div class="md:w-4/9">
             <h1 class="text-5xl font-medium text-gray-800">
-                Want anything to be easy with <b>LaslesVPN.</b>
+                Make Everything Easy with <b>LaslesVPN.</b>
             </h1>
             <p class="mt-5 text-gray-600">
-                Provide a network for all your needs with ease and fun using <span
-                    class="font-medium">LaslesVPN</span
-                > discover interesting features from us.
+                Experience a network that caters to all your needs with simplicity and enjoyment
+                using <span class="font-medium">LaslesVPN</span>. Discover fascinating features from
+                us.
             </p>
             <button
                 class="drop- mt-12 h-16 w-64 rounded-xl bg-primary font-bold text-white drop-shadow-button transition-colors hover:bg-primary-dark"
@@ -30,8 +30,8 @@
         <div class="stat">
             <img src="/images/icon/user.svg" alt="user icon" />
             <div>
-                <h3>90+</h3>
-                <p>User</p>
+                <h3>10,000+</h3>
+                <p>Users</p>
             </div>
         </div>
 
