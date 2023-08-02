@@ -1,5 +1,8 @@
 <section id="hero">
-    <div class="mx-auto flex max-w-6xl flex-col gap-10 md:flex-row md:items-center">
+    <div class="mx-auto flex max-w-6xl flex-col gap-10 md:flex-row-reverse md:items-center">
+        <div class="mt-8 md:mt-0 md:w-5/9">
+            <img class="h-full w-full" src="/images/hero_illustration.svg" alt="VPN Service" />
+        </div>
         <div class="md:w-4/9">
             <h1 class="text-5xl font-medium text-gray-800">
                 Make Everything Easy with <b>LaslesVPN.</b>
@@ -10,16 +13,9 @@
                 us.
             </p>
             <button
-                class="drop- mt-12 h-16 w-64 rounded-xl bg-primary font-bold text-white drop-shadow-button transition-colors hover:bg-primary-dark"
+                class="drop- mt-12 h-16 w-64 rounded-lg bg-primary font-bold text-white drop-shadow-button transition-colors hover:bg-primary-dark"
                 >Get Started</button
             >
-        </div>
-        <div class="mt-8 md:mt-0 md:w-5/9">
-            <img
-                class="h-full w-full rounded"
-                src="/images/hero_illustration.svg"
-                alt="VPN Service"
-            />
         </div>
     </div>
 </section>
@@ -54,7 +50,7 @@
 </section>
 
 <section id="features">
-    <div class="mx-auto flex max-w-6xl flex-col gap-10 md:flex-row md:items-center">
+    <div class="mx-auto mb-12 flex max-w-6xl flex-col gap-16 md:flex-row md:items-center">
         <div class="md:w-1/2">
             <img class="h-full w-full" src="/images/features_illustration.svg" alt="VPN Service" />
         </div>
@@ -67,20 +63,24 @@
             <div class="mt-5">
                 <div class="features flex flex-col gap-5 text-sm">
                     <div>
-                        <img src="/images/icon/check.svg" alt="check icon" />
+                        <img src="/images/icon/check_filled.svg" alt="check icon" />
                         <p>Experience powerful online protection.</p>
                     </div>
                     <div>
-                        <img src="/images/icon/check.svg" alt="check icon" />
+                        <img src="/images/icon/check_filled.svg" alt="check icon" />
                         <p>Enjoy internet without borders.</p>
                     </div>
                     <div>
-                        <img src="/images/icon/check.svg" alt="check icon" />
+                        <img src="/images/icon/check_filled.svg" alt="check icon" />
                         <p>Get a supercharged VPN.</p>
                     </div>
                     <div>
-                        <img src="/images/icon/check.svg" alt="check icon" />
+                        <img src="/images/icon/check_filled.svg" alt="check icon" />
                         <p>No time limits.</p>
+                    </div>
+                    <div>
+                        <img src="/images/icon/check_filled.svg" alt="check icon" />
+                        <p>Stay private on the internet.</p>
                     </div>
                 </div>
             </div>
@@ -88,12 +88,97 @@
     </div>
 </section>
 
+<section id="pricing-locations" class="bg-gradient-to-b from-zinc-100 to-white">
+    <div
+        class="mx-auto my-16 flex w-full max-w-6xl flex-col items-center justify-center gap-10 text-center"
+    >
+        <div id="pricing" class="w-full">
+            <h1 class="text-4xl font-medium text-gray-800">Choose Your Plan</h1>
+            <p class="mx-auto mt-5 md:w-1/2">
+                Discover the perfect package that suits you best and embark on a joyful and
+                delightful exploration.
+            </p>
+            <div class="mt-16 grid w-full grid-cols-1 gap-8 md:grid-cols-3">
+                <div class="plan">
+                    <img src="/images/Free.svg" alt="plan icon" />
+                    <h2>Free Plan</h2>
+                    <ul>
+                        <li>Unlimited Bandwidth</li>
+                        <li>Basic security and encryption</li>
+                        <li>3 countries</li>
+                        <li class="cross">1 device only</li>
+                        <li class="cross">Limited customer support</li>
+                        <li class="cross">Ads</li>
+                    </ul>
+                    <div class=" mt-auto text-center text-2xl">
+                        <p><span class="font-medium text-slate-900">Free</span></p>
+                        <button class="btn-outline">Select</button>
+                    </div>
+                </div>
+                <div class="plan">
+                    <img src="/images/Standard.svg" alt="plan icon" />
+                    <h2>Standard Plan</h2>
+                    <ul>
+                        <li>Unlimited Bandwidth</li>
+                        <li>Advanced security features (kill switch, split tunneling),</li>
+                        <li>50+ countries</li>
+                        <li>Up to 3 devices</li>
+                        <li>Dedicated customer support</li>
+                        <li>No ads</li>
+                    </ul>
+                    <div class=" mt-auto text-center text-2xl">
+                        <p>
+                            <span class="font-medium text-slate-900">$12</span>
+                            <span class="font-normal text-gray-600">/ mo</span>
+                        </p>
+                        <button class="btn-outline">Select</button>
+                    </div>
+                </div>
+                <div class="plan">
+                    <img src="/images/Premium.svg" alt="plan icon" />
+                    <h2>Premium Plan</h2>
+                    <ul>
+                        <li>Unlimited Bandwidth</li>
+                        <li>Enhanced security features (double encryption)</li>
+                        <li>100+ countries</li>
+                        <li>Up to 5 devices</li>
+                        <li>Priority customer support</li>
+                        <li>Streaming-optimized servers</li>
+                        <li>No ads</li>
+                    </ul>
+                    <div class=" mt-auto text-center text-2xl">
+                        <p>
+                            <span class="font-medium text-slate-900">$12</span>
+                            <span class="font-normal text-gray-600">/ mo</span>
+                        </p>
+                        <button class="btn">Select</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="locations" class="mt-20">
+            <h1 class="mx-auto mt-5 text-4xl font-medium text-gray-800">
+                Powerful and Fast VPN with a Global Network
+            </h1>
+            <p class="mx-auto mt-5 md:w-1/2">
+                Experience the widespread coverage of <span class="font-medium">LaslesVPN</span>,
+                ensuring seamless connectivity no matter where you are.
+            </p>
+            <img class="mt-36" src="/images/huge_global.svg" alt="VPN Service" />
+        </div>
+    </div>
+</section>
+
 <style lang="postcss">
     section {
-        @apply px-28 py-12;
+        @apply px-14 py-12 md:px-28;
+    }
+    #stats,
+    #pricing-locations {
+        @apply px-4 sm:px-14 lg:px-28;
     }
     .stat {
-        @apply m-auto flex h-32 w-full flex-row place-content-center items-center gap-9;
+        @apply m-auto flex h-32 w-full flex-col place-content-center items-center gap-4 md:flex-row md:gap-7;
 
         & img {
             width: 55px;
@@ -114,6 +199,34 @@
     .features {
         & div {
             @apply flex items-center gap-3;
+        }
+    }
+    .plan {
+        @apply flex flex-col items-center gap-5 rounded-lg border-2 border-neutral-200 bg-white px-4 py-16 text-sm lg:px-8;
+        & h2 {
+            @apply text-lg font-medium text-gray-800;
+        }
+
+        & ul {
+            @apply p-2 text-left;
+        }
+
+        & li {
+            @apply m-3 pl-2 text-copy-p;
+            list-style-image: url("/images/icon/check.svg");
+        }
+
+        & li.cross {
+            list-style-image: url("/images/icon/cross.svg");
+        }
+        & button {
+            @apply mt-5 h-11 w-24 text-base font-bold transition-colors lg:w-44;
+            &.btn-outline {
+                @apply rounded-full border border-primary  text-primary  hover:bg-primary hover:text-white;
+            }
+            &.btn {
+                @apply rounded-full bg-primary  text-white drop-shadow-button  hover:bg-primary-dark;
+            }
         }
     }
 </style>
