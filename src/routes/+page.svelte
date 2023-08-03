@@ -53,6 +53,41 @@
     </div>
 </section>
 
+<section id="features">
+    <div class="mx-auto flex max-w-6xl flex-col gap-10 md:flex-row md:items-center">
+        <div class="md:w-1/2">
+            <img class="h-full w-full" src="/images/features_illustration.svg" alt="VPN Service" />
+        </div>
+        <div class="mt-8 md:mt-0 md:w-1/2">
+            <h1 class="text-4xl font-medium text-gray-800">Discover the Many Features We Offer</h1>
+            <p class="mt-5">
+                Explore the exciting range of features that we provide, each with its own unique
+                function.
+            </p>
+            <div class="mt-5">
+                <div class="features flex flex-col gap-5 text-sm">
+                    <div>
+                        <img src="/images/icon/check.svg" alt="check icon" />
+                        <p>Experience powerful online protection.</p>
+                    </div>
+                    <div>
+                        <img src="/images/icon/check.svg" alt="check icon" />
+                        <p>Enjoy internet without borders.</p>
+                    </div>
+                    <div>
+                        <img src="/images/icon/check.svg" alt="check icon" />
+                        <p>Get a supercharged VPN.</p>
+                    </div>
+                    <div>
+                        <img src="/images/icon/check.svg" alt="check icon" />
+                        <p>No time limits.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <style lang="postcss">
     section {
         @apply px-28 py-12;
@@ -74,6 +109,11 @@
 
         &:not(:nth-of-type(1)) {
             @apply border-l-2 border-l-neutral-100;
+        }
+    }
+    .features {
+        & div {
+            @apply flex items-center gap-3;
         }
     }
 </style>
