@@ -169,6 +169,16 @@
     </div>
 </section>
 
+<section id="company">
+    <div class="mx-auto flex w-full max-w-6xl flex-row items-center justify-center gap-10">
+        <img src="/images/logo/Netflix.svg" alt="netflix logo" />
+        <img src="/images/logo/Reddit.svg" alt="reddit logo" />
+        <img src="/images/logo/Amazon.svg" alt="amazon logo" />
+        <img src="/images/logo/Discord.svg" alt="discord logo" />
+        <img src="/images/logo/Spotify.svg" alt="spotify logo" />
+    </div>
+</section>
+
 <style lang="postcss">
     section {
         @apply px-14 py-12 md:px-28;
