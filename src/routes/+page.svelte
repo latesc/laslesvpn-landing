@@ -412,4 +412,8 @@
             @apply mt-4 text-left;
         }
     }
+    #cta {
+        @apply bg-white;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 1) 50%, #f8f8f8 50%);
+    }
 </style>
