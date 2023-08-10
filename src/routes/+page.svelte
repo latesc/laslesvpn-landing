@@ -232,7 +232,6 @@
     </div>
 </section>
 <section id="cta">
-    <!-- CTA section -->
     <div
         class="max-w-96 mx-auto flex w-full max-w-6xl flex-col items-center justify-center gap-10 rounded-lg bg-white px-16 py-14 text-center drop-shadow-stats lg:flex-row lg:justify-between lg:text-left"
     >
@@ -289,7 +288,6 @@
             <p class="mt-5 text-gray-600">
                 <b>LaslesVPN</b> is a private virtual network that has unique features and has high security.
             </p>
-            <!-- social links -->
             <div class="mt-6 flex gap-4">
                 <button
                     class="flex h-8 w-8 items-center justify-center rounded-full bg-white shadow-md"
@@ -375,6 +373,43 @@
         }
         & li {
             @apply mb-4 cursor-pointer transition-colors hover:text-gray-400;
+        }
+    }
+    .testimonial {
+        @apply flex h-full w-96 flex-col items-center rounded-lg border-2 border-neutral-200 bg-white p-4 text-sm xl:p-7;
+        min-height: max-content;
+
+        & > div {
+            @apply grid w-full grid-cols-3 gap-x-2 xl:gap-x-5;
+            grid-template-columns: auto 1fr auto;
+            grid-template-areas: "avatar name rating" "avatar location rating";
+
+            & img {
+                @apply row-span-2 rounded-full;
+                grid-area: avatar;
+            }
+            & h3 {
+                @apply text-lg font-medium text-gray-800;
+                grid-area: name;
+            }
+            & p {
+                @apply text-gray-600;
+                grid-area: location;
+            }
+            & span {
+                @apply row-span-2 flex items-center gap-2;
+                grid-area: rating;
+
+                & h4 {
+                    @apply font-normal;
+                }
+                & img {
+                    @apply h-5 w-5;
+                }
+            }
+        }
+        & > p {
+            @apply mt-4 text-left;
         }
     }
 </style>
