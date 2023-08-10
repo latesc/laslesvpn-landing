@@ -260,6 +260,22 @@
         </div>
     </div>
 </section>
+<section id="cta">
+    <!-- CTA section -->
+    <div
+        class="max-w-96 mx-auto flex w-full max-w-6xl flex-col items-center justify-center gap-10 rounded-lg bg-white px-16 py-14 text-center drop-shadow-stats lg:flex-row lg:justify-between lg:text-left"
+    >
+        <span class=" w-96">
+            <h1 class="text-4xl font-medium text-gray-800">
+                Subscribe Now to Get Special Features!
+            </h1>
+            <p class="mt-2">Let's subscribe with us and find the fun.</p>
+        </span>
+        <button class="rounded-lg bg-primary px-16 py-4 text-white hover:bg-primary-dark"
+            >Subscribe Now</button
+        >
+    </div>
+</section>
 
 <style lang="postcss">
     section {
@@ -357,5 +373,9 @@
         & > p {
             @apply mt-4 text-left;
         }
+    }
+    #cta {
+        @apply bg-white;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 1) 50%, #f8f8f8 50%);
     }
 </style>
