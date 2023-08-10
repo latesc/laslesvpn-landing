@@ -1,3 +1,8 @@
+<script>
+    import ArrowLeft from "$lib/components/icon/arrow-left.svelte";
+    import ArrowRight from "$lib/components/icon/arrow-right.svelte";
+</script>
+
 <section id="hero">
     <div class="mx-auto flex max-w-6xl flex-col gap-10 md:flex-row-reverse md:items-center">
         <div class="mt-8 md:mt-0 md:w-5/9">
@@ -170,12 +175,89 @@
 </section>
 
 <section id="company">
-    <div class="mx-auto flex w-full max-w-6xl flex-row items-center justify-center gap-10">
+    <div
+        class="mx-auto flex w-full max-w-6xl flex-row flex-wrap items-center justify-center gap-10"
+    >
         <img src="/images/logo/Netflix.svg" alt="netflix logo" />
         <img src="/images/logo/Reddit.svg" alt="reddit logo" />
         <img src="/images/logo/Amazon.svg" alt="amazon logo" />
         <img src="/images/logo/Discord.svg" alt="discord logo" />
         <img src="/images/logo/Spotify.svg" alt="spotify logo" />
+    </div>
+</section>
+
+<section id="testimonials">
+    <div class="mx-auto flex h-max w-full max-w-6xl flex-col items-center justify-center gap-10">
+        <h1 class="text-4xl font-medium text-gray-800">Trusted by Thousands of Happy Customers</h1>
+        <p>
+            Hear from our happy customers who have experienced the thrill of using this amazing
+            feature.
+        </p>
+        <div class="mt-16 grid w-max grid-cols-1 gap-8 md:grid-cols-3">
+            <div class="testimonial">
+                <div>
+                    <img src="/images/avatar-1.png" alt="avatar" />
+                    <h3 class="text-xl font-medium">Viezh Robert</h3>
+                    <p class="text-gray-600">Warsaw, Poland</p>
+                    <span>
+                        <h4>4.5</h4>
+                        <img src="/images/icon/star.svg" alt="rating" />
+                    </span>
+                </div>
+                <p class="mt-5 text-center">
+                    “Wow... I am very happy to use this VPN, it turned out to be more than my
+                    expectations and so far there have been no problems. LaslesVPN always the best”
+                </p>
+            </div>
+            <div class="testimonial">
+                <div>
+                    <img src="/images/avatar-2.png" alt="avatar" />
+                    <h3 class="text-xl font-medium">Yessica Christy</h3>
+                    <p class="text-gray-600">Shanxi, China</p>
+                    <span>
+                        <h4>4.5</h4>
+                        <img src="/images/icon/star.svg" alt="rating" />
+                    </span>
+                </div>
+                <p class="mt-5 text-center">
+                    “I like it because I like to travel far and still can connect with high speed.”
+                </p>
+            </div>
+            <div class="testimonial">
+                <div>
+                    <img src="/images/avatar-3.png" alt="avatar" />
+                    <h3 class="text-xl font-medium">Kim Young Jou</h3>
+                    <p class="text-gray-600">Seoul, South Korea</p>
+                    <span>
+                        <h4>4.5</h4>
+                        <img src="/images/icon/star.svg" alt="rating" />
+                    </span>
+                </div>
+                <p class="mt-5 text-center">
+                    “This is very unusual for my business that currently requires a virtual private
+                    network that has high security.”
+                </p>
+            </div>
+        </div>
+        <div class="flex w-full items-center justify-between gap-5">
+            <div class="flex items-center gap-3">
+                <button class="flex h-3 w-11 items-center justify-center rounded-full bg-primary" />
+                <button class="flex h-3 w-3 items-center justify-center rounded-full bg-zinc-200" />
+                <button class="flex h-3 w-3 items-center justify-center rounded-full bg-zinc-200" />
+            </div>
+            <div class="flex items-center gap-5">
+                <button
+                    class="flex h-12 w-12 items-center justify-center rounded-full border-2 border-primary"
+                >
+                    <ArrowLeft fill="rgb(245 56 56)" />
+                </button>
+                <button
+                    class="flex h-12 w-12 items-center justify-center rounded-full border-2 border-primary bg-primary"
+                >
+                    <ArrowRight fill="#FFF" />
+                </button>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -237,6 +319,43 @@
             &.btn {
                 @apply rounded-full bg-primary  text-white drop-shadow-button  hover:bg-primary-dark;
             }
+        }
+    }
+    .testimonial {
+        @apply flex h-full w-96 flex-col items-center rounded-lg border-2 border-neutral-200 bg-white p-4 text-sm xl:p-7;
+        min-height: max-content;
+
+        & > div {
+            @apply grid w-full grid-cols-3 gap-x-2 xl:gap-x-5;
+            grid-template-columns: auto 1fr auto;
+            grid-template-areas: "avatar name rating" "avatar location rating";
+
+            & img {
+                @apply row-span-2 rounded-full;
+                grid-area: avatar;
+            }
+            & h3 {
+                @apply text-lg font-medium text-gray-800;
+                grid-area: name;
+            }
+            & p {
+                @apply text-gray-600;
+                grid-area: location;
+            }
+            & span {
+                @apply row-span-2 flex items-center gap-2;
+                grid-area: rating;
+
+                & h4 {
+                    @apply font-normal;
+                }
+                & img {
+                    @apply h-5 w-5;
+                }
+            }
+        }
+        & > p {
+            @apply mt-4 text-left;
         }
     }
 </style>
