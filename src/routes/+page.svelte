@@ -1,4 +1,6 @@
 <script>
+    import Plan from "$lib/components/Plan.svelte";
+    import Stat from "$lib/components/Stat.svelte";
     import ArrowLeft from "$lib/components/icon/arrow-left.svelte";
     import ArrowRight from "$lib/components/icon/arrow-right.svelte";
     import FacebookIcon from "$lib/components/icon/facebook.svelte";
@@ -31,29 +33,9 @@
     <div
         class="px-29 mx-auto grid max-w-6xl grid-cols-3 items-center justify-items-center bg-white py-9 drop-shadow-stats"
     >
-        <div class="stat">
-            <img src="/images/icon/user.svg" alt="user icon" />
-            <div>
-                <h3>10,000+</h3>
-                <p>Users</p>
-            </div>
-        </div>
-
-        <div class="stat">
-            <img src="/images/icon/location.svg" alt="location icon" />
-            <div>
-                <h3>30+</h3>
-                <p>Locations</p>
-            </div>
-        </div>
-
-        <div class="stat">
-            <img src="/images/icon/server.svg" alt="server icon" />
-            <div>
-                <h3>50+</h3>
-                <p>Servers</p>
-            </div>
-        </div>
+        <Stat icon="/images/icon/server.svg" value="90+" label="Server" />
+        <Stat icon="/images/icon/location.svg" value="30+" label="Locations" />
+        <Stat icon="/images/icon/user.svg" value="50+" label="Users" />
     </div>
 </section>
 
@@ -107,61 +89,47 @@
                 delightful exploration.
             </p>
             <div class="mt-16 grid w-full grid-cols-1 gap-8 md:grid-cols-3">
-                <div class="plan">
-                    <img src="/images/Free.svg" alt="plan icon" />
-                    <h2>Free Plan</h2>
-                    <ul>
-                        <li>Unlimited Bandwidth</li>
-                        <li>Basic security and encryption</li>
-                        <li>3 countries</li>
-                        <li class="cross">1 device only</li>
-                        <li class="cross">Limited customer support</li>
-                        <li class="cross">Ads</li>
-                    </ul>
-                    <div class=" mt-auto text-center text-2xl">
-                        <p><span class="font-medium text-slate-900">Free</span></p>
-                        <button class="btn-outline">Select</button>
-                    </div>
-                </div>
-                <div class="plan">
-                    <img src="/images/Standard.svg" alt="plan icon" />
-                    <h2>Standard Plan</h2>
-                    <ul>
-                        <li>Unlimited Bandwidth</li>
-                        <li>Advanced security features (kill switch, split tunneling),</li>
-                        <li>50+ countries</li>
-                        <li>Up to 3 devices</li>
-                        <li>Dedicated customer support</li>
-                        <li>No ads</li>
-                    </ul>
-                    <div class=" mt-auto text-center text-2xl">
-                        <p>
-                            <span class="font-medium text-slate-900">$12</span>
-                            <span class="font-normal text-gray-600">/ mo</span>
-                        </p>
-                        <button class="btn-outline">Select</button>
-                    </div>
-                </div>
-                <div class="plan">
-                    <img src="/images/Premium.svg" alt="plan icon" />
-                    <h2>Premium Plan</h2>
-                    <ul>
-                        <li>Unlimited Bandwidth</li>
-                        <li>Enhanced security features (double encryption)</li>
-                        <li>100+ countries</li>
-                        <li>Up to 5 devices</li>
-                        <li>Priority customer support</li>
-                        <li>Streaming-optimized servers</li>
-                        <li>No ads</li>
-                    </ul>
-                    <div class=" mt-auto text-center text-2xl">
-                        <p>
-                            <span class="font-medium text-slate-900">$12</span>
-                            <span class="font-normal text-gray-600">/ mo</span>
-                        </p>
-                        <button class="btn">Select</button>
-                    </div>
-                </div>
+                <Plan
+                    icon="/images/Free.svg"
+                    title="Free Plan"
+                    features={[
+                        "Unlimited Bandwidth",
+                        "Basic security and encryption",
+                        "3 countries"
+                    ]}
+                    limitations={["1 device only", "Limited customer support", "Ads"]}
+                    price="Free"
+                    isHighlighted={false}
+                />
+                <Plan
+                    icon="/images/Standard.svg"
+                    title="Standard Plan"
+                    features={[
+                        "Unlimited Bandwidth",
+                        "Advanced security features (kill switch, split tunneling)",
+                        "50+ countries",
+                        "Up to 3 devices",
+                        "Dedicated customer support",
+                        "No ads"
+                    ]}
+                    price="9"
+                    isHighlighted={false}
+                />
+                <Plan
+                    icon="/images/Premium.svg"
+                    title="Premium Plan"
+                    features={[
+                        "Unlimited Bandwidth",
+                        "Enhanced security features (double encryption)",
+                        "100+ countries",
+                        "Up to 5 devices",
+                        "Priority customer support",
+                        "Streaming-optimized servers",
+                        "No ads"
+                    ]}
+                    price="12"
+                    isHighlighted={true}
+                />
             </div>
         </div>
         <div id="locations" class="mt-20">
@@ -352,56 +320,9 @@
     #pricing-locations {
         @apply px-4 sm:px-14 lg:px-28;
     }
-    .stat {
-        @apply m-auto flex h-32 w-full flex-col place-content-center items-center gap-4 md:flex-row md:gap-7;
-
-        & img {
-            width: 55px;
-            height: 55px;
-        }
-        & h3 {
-            @apply text-2xl font-bold;
-        }
-
-        & p {
-            @apply text-xl;
-        }
-
-        &:not(:nth-of-type(1)) {
-            @apply border-l-2 border-l-neutral-100;
-        }
-    }
     .features {
         & div {
             @apply flex items-center gap-3;
-        }
-    }
-    .plan {
-        @apply flex flex-col items-center gap-5 rounded-lg border-2 border-neutral-200 bg-white px-4 py-16 text-sm lg:px-8;
-        & h2 {
-            @apply text-lg font-medium text-gray-800;
-        }
-
-        & ul {
-            @apply p-2 text-left;
-        }
-
-        & li {
-            @apply m-3 pl-2 text-copy-p;
-            list-style-image: url("/images/icon/check.svg");
-        }
-
-        & li.cross {
-            list-style-image: url("/images/icon/cross.svg");
-        }
-        & button {
-            @apply mt-5 h-11 w-24 text-base font-bold transition-colors lg:w-44;
-            &.btn-outline {
-                @apply rounded-full border border-primary  text-primary  hover:bg-primary hover:text-white;
-            }
-            &.btn {
-                @apply rounded-full bg-primary  text-white drop-shadow-button  hover:bg-primary-dark;
-            }
         }
     }
     .testimonial {
