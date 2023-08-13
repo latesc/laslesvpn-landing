@@ -377,4 +377,61 @@
             @apply mb-4 cursor-pointer transition-colors hover:text-gray-400;
         }
     }
+    .features {
+        & div {
+            @apply flex items-center gap-3;
+        }
+    }
+    .testimonial {
+        @apply flex h-full w-96 flex-col items-center rounded-lg border-2 border-neutral-200 bg-white p-4 text-sm xl:p-7;
+        min-height: max-content;
+
+        & > div {
+            @apply grid w-full grid-cols-3 gap-x-2 xl:gap-x-5;
+            grid-template-columns: auto 1fr auto;
+            grid-template-areas: "avatar name rating" "avatar location rating";
+
+            & img {
+                @apply row-span-2 rounded-full;
+                grid-area: avatar;
+            }
+            & h3 {
+                @apply text-lg font-medium text-gray-800;
+                grid-area: name;
+            }
+            & p {
+                @apply text-gray-600;
+                grid-area: location;
+            }
+            & span {
+                @apply row-span-2 flex items-center gap-2;
+                grid-area: rating;
+
+                & h4 {
+                    @apply font-normal;
+                }
+                & img {
+                    @apply h-5 w-5;
+                }
+            }
+        }
+        & > p {
+            @apply mt-4 text-left;
+        }
+    }
+    #cta {
+        @apply bg-white;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 1) 50%, #fafaf9 50%);
+    }
+    footer {
+        & h2 {
+            @apply text-xl;
+        }
+        & h3 {
+            @apply text-lg font-medium text-gray-800;
+        }
+        & li {
+            @apply mb-4 cursor-pointer transition-colors hover:text-gray-400;
+        }
+    }
 </style>
