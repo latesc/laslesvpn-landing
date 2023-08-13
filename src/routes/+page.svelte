@@ -414,6 +414,17 @@
     }
     #cta {
         @apply bg-white;
-        background: linear-gradient(180deg, rgba(255, 255, 255, 1) 50%, #f8f8f8 50%);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 1) 50%, #fafaf9 50%);
+    }
+    footer {
+        & h2 {
+            @apply text-xl;
+        }
+        & h3 {
+            @apply text-lg font-medium text-gray-800;
+        }
+        & li {
+            @apply mb-4 cursor-pointer transition-colors hover:text-gray-400;
+        }
     }
 </style>
