@@ -1,6 +1,9 @@
 <script>
     import ArrowLeft from "$lib/components/icon/arrow-left.svelte";
     import ArrowRight from "$lib/components/icon/arrow-right.svelte";
+    import FacebookIcon from "$lib/components/icon/facebook.svelte";
+    import InstagramIcon from "$lib/components/icon/instagram.svelte";
+    import TwitterIcon from "$lib/components/icon/twitter.svelte";
 </script>
 
 <section id="hero">
@@ -271,11 +274,75 @@
             </h1>
             <p class="mt-2">Let's subscribe with us and find the fun.</p>
         </span>
-        <button class="rounded-lg bg-primary px-16 py-4 text-white hover:bg-primary-dark"
+        <button
+            class="rounded-lg bg-primary px-16 py-4 font-bold text-white drop-shadow-button transition-colors hover:bg-primary-dark"
             >Subscribe Now</button
         >
     </div>
 </section>
+<footer class="bg-stone-50 pb-20 pt-12">
+    <div class="mx-auto flex w-full max-w-6xl flex-col justify-between md:flex-row-reverse">
+        <div class="flex justify-between gap-8 px-14 md:w-1/2">
+            <div>
+                <h3>Product</h3>
+                <ul class="mt-5 text-gray-600">
+                    <li><button>Download</button></li>
+                    <li><button>Pricing</button></li>
+                    <li><button>Locations</button></li>
+                    <li><button>Server</button></li>
+                    <li><button>Countries</button></li>
+                    <li><button>Blog</button></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Engage</h3>
+                <ul class="mt-5 text-gray-600">
+                    <li><button>LaslesVPN ?</button></li>
+                    <li><button>FAQ</button></li>
+                    <li><button>Tutorials</button></li>
+                    <li><button>About Us</button></li>
+                    <li><button>Privacy Policy</button></li>
+                    <li><button>Terms of Service</button></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Earn Money</h3>
+                <ul class="mt-5 text-gray-600">
+                    <li><button>Affiliate</button></li>
+                    <li><button>Become Partner</button></li>
+                </ul>
+            </div>
+        </div>
+        <div class="w-96">
+            <span class="flex items-center gap-2">
+                <img src="/images/logo.svg" alt="logo" />
+                <h2 class="font-medium">Lasles<b>VPN</b></h2>
+            </span>
+            <p class="mt-5 text-gray-600">
+                <b>LaslesVPN</b> is a private virtual network that has unique features and has high security.
+            </p>
+            <!-- social links -->
+            <div class="mt-6 flex gap-4">
+                <button
+                    class="flex h-8 w-8 items-center justify-center rounded-full bg-white shadow-md"
+                >
+                    <FacebookIcon />
+                </button>
+                <button
+                    class="flex h-8 w-8 items-center justify-center rounded-full bg-white shadow-md"
+                >
+                    <TwitterIcon />
+                </button>
+                <button
+                    class="flex h-8 w-8 items-center justify-center rounded-full bg-white shadow-md"
+                >
+                    <InstagramIcon />
+                </button>
+            </div>
+            <p class="mt-6 text-gray-400">©Lasles<b>VPN</b> 2020. All Rights Reserved</p>
+        </div>
+    </div>
+</footer>
 
 <style lang="postcss">
     section {
@@ -376,6 +443,17 @@
     }
     #cta {
         @apply bg-white;
-        background: linear-gradient(180deg, rgba(255, 255, 255, 1) 50%, #f8f8f8 50%);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 1) 50%, #fafaf9 50%);
+    }
+    footer {
+        & h2 {
+            @apply text-xl;
+        }
+        & h3 {
+            @apply text-lg font-medium text-gray-800;
+        }
+        & li {
+            @apply mb-4 cursor-pointer transition-colors hover:text-gray-400;
+        }
     }
 </style>
