@@ -1,6 +1,6 @@
 # LaslesVPN Landing Page
 
-This repository contains the source code for a landing page for a fictional VPN service using the Svelte framework.
+This repository contains the source code for a landing page for a fictional VPN service using Svelte and TailwindCSS.
 
 ## Table of Contents
 
